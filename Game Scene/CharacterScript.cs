@@ -84,7 +84,7 @@ public class CharacterScript : MonoBehaviour
             transform.Translate(Vector3.right * movementDistance * Input.GetAxis("Horizontal") * Time.deltaTime);
 
             //flip character based on direction
-            //https://www.youtube.com/watch?v=ccxXxvlS4mI "wrongWayToFlip()"
+            //reference - https://www.youtube.com/watch?v=ccxXxvlS4mI "wrongWayToFlip()"
             if ((Input.GetAxis("Horizontal") < 0 && facingRight) || (Input.GetAxis("Horizontal") > 0 && !facingRight))
             {
                 facingRight = !facingRight;
@@ -129,7 +129,7 @@ public class CharacterScript : MonoBehaviour
             Vector3 playerPos = Camera.main.WorldToViewportPoint(transform.position);
             if(playerPos.x <= 0)
             {
-                //https://forum.unity.com/threads/how-to-detect-screen-edge-in-unity.109583/
+                //reference -https://forum.unity.com/threads/how-to-detect-screen-edge-in-unity.109583/
                 Vector3 rightSide = Camera.main.ViewportToWorldPoint(new Vector3(1.0f,0.0f, 0.0f));
                 transform.position = new Vector3(rightSide.x, transform.position.y, transform.position.z);
             }
