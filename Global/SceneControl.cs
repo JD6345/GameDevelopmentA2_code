@@ -41,9 +41,7 @@ public class SceneControl : MonoBehaviour
         StartCoroutine(Fade());
         loadScene(sceneNum);
     }
-
-    //to be honest, I have little idea as to what is going on here. The assessment asked for fade transitions.
-    //https://www.youtube.com/watch?v=iV-igTT5yE4
+    
     public IEnumerator Fade()
     {
         fadeAnim.SetBool("Fade", true);
